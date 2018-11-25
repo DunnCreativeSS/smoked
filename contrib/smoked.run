@@ -62,6 +62,8 @@ if [[ "$USE_FULL_WEB_NODE" ]]; then
   cp /etc/smoked/fullnode.config.ini $HOME/config.ini
 else
   cp /etc/smoked/config.ini $HOME/config.ini
+  echo "witness = \"${WITNESS}\"";
+  echo "private-key = ${PRIVATE_KEY}";
 fi
 
 chown smoked:smoked $HOME/config.ini
