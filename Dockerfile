@@ -9,7 +9,7 @@ ENV LANG=en_US.UTF-8
 RUN apt-get update && apt-get install git curl wget -y
 RUN mkdir /etc/smoked
 RUN cd /etc/smoked && wget https://github.com/smokenetwork/smoked/releases/download/v0.0.5/cli_wallet-0.0.5-x86_64-linux.tar.gz && wget https://github.com/smokenetwork/smoked/releases/download/v0.0.5/smoked-0.0.5-x86_64-linux.tar.gz
-RUN tar xfv smoked-0.0.5-x86_64-linux.tar.gz && tar xfv cli_wallet-0.0.5-x86_64-linux.tar.gz 
+RUN cd /etc/smoked && tar xfv smoked-0.0.5-x86_64-linux.tar.gz && tar xfv cli_wallet-0.0.5-x86_64-linux.tar.gz 
 
 RUN useradd -s /bin/bash -m -d /var/lib/smoked smoked
 
